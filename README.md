@@ -1,14 +1,15 @@
-+thater_Analysis
+#Pyber_Analysis
 PyBer Project Folder
 ## Overview
 ### Purpose of Analysis
 This project folder provides a summary analysis of the Pyber ride sharing datasets. For the challenge assignment, I constructed one summary dataframe and a chart that plots weekly data on fares for each city type. In the below sections, I will detail how the data looked and the steps I went through to provide my summary analysis. I will also compare the differences in ride-sharing data between each city type and provide three recommendations to PyBer for addressing disparities between these city types.
 ### Dataset
 The original data consisted of two separate datasets, one with city-level information and one with ride-level information. The city dataset broke down the number of PyBer drivers and the city type (i.e., rural, suburban, or urban) for each city. See below for a sample of the dataset. 
-
+![City Dataset](https://github.com/SethBoswell/PyBer_Analysis/blob/main/Resources/city_data.png)
 The ride data contains information on each individual ride someone took using PyBer between January 1st, 2019 and May 8th, 2019. For each ride taken, the dataset tracks the timestamp when the ride was taken, the city in which the ride occured, the fare, and the ride identification number. See below for a sample of the dataset. 
-
+![Ride Dataset](https://github.com/SethBoswell/PyBer_Analysis/blob/main/Resources/ride_data.png)
 The first step of the analysis was to merge these two datasets so that I could include the city information with the ride dataset. To do this, I used the Panda's merge function on the city column between the two datasets to create the below table.
+![Merged Dataset](https://github.com/SethBoswell/PyBer_Analysis/blob/main/Resources/merged_data.png)
 ## Results
 ### Summary Dataframe Results
 To construct the summary dataframe, I grouped the merged dataset by city type and calculated the following information:
@@ -19,7 +20,7 @@ To construct the summary dataframe, I grouped the merged dataset by city type an
 - The average amount of fares collected per driver for each city type
 
 Below I have included the summary dataframe.
-
+![Summary Dataframe](https://github.com/SethBoswell/PyBer_Analysis/blob/main/Resources/PyBer_summary_dataframe.png)
 As you can see, there is a strong, positive correlation between the amount of urbanization and peoples' use of PyBer's services. Urban cities have almost three times as many rides compared to suburban cities and thirteen times as many rides compared to rural cities! Furthermore, urban cities have nearly five times as many drivers compared to suburban ones and thirty times as many drivers compared to rural ones. Logically, it follows that the amount of fares collected by urban cities is twice as many as suburban ones and nine times as many as rural ones. 
 
 The cost of using PyBer in rural areas is also more expensive. The summary dataframe shows that the average fare per ride rural cities is $34.62 compared to #30.97 in suburban cities and $24.53 in urban cities. It is unclear whether the increase in fares is due to longer distances or higher rates in rural areas, although it is likely a combination of both. Finally, the average fare per driver is much higher in rural areas at $55.49, compared to $39.50 in suburban cities and $16.57 in urban cities. Higher fares in rural cities combined with less drivers is driving these results.
